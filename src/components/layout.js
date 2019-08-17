@@ -3,11 +3,15 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import "../styles/index.scss"
 
+import layoutStyles from "../components/layout.module.scss"
+
 const Layout = prop => {
   return (
-    <div>
-      <Header />
-      {prop.children}
+    <div className={layoutStyles.container}>
+      <div>
+        <Header />
+        {prop.children}
+      </div>
       <Footer />
     </div>
   )
